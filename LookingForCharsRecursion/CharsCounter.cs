@@ -12,32 +12,8 @@ namespace LookingForCharsRecursion
         /// <returns>The number of occurrences of all characters.</returns>
         public static int GetCharsCount(string str, char[] chars)
         {
-            if (str == null)
-            {
-                throw new ArgumentNullException(nameof(str));
-            }
-
-            if (chars == null)
-            {
-                throw new ArgumentNullException(nameof(chars));
-            }
-
-            if (str.Length == 0)
-            {
-                return 0;
-            }
-
-            int count = 0;
-
-            for (int i = 0; i < chars.Length; i++)
-            {
-                if (str[0] == chars[i])
-                {
-                    count++;
-                }
-            }
-
-            return count + GetCharsCount(str[1..], chars);
+            // TODO #1. Implement the method using recursive algorithm.
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -50,47 +26,8 @@ namespace LookingForCharsRecursion
         /// <returns>The number of occurrences of all characters within the specified range of elements in the <see cref="string"/>.</returns>
         public static int GetCharsCount(string str, char[] chars, int startIndex, int endIndex)
         {
-            if (str == null)
-            {
-                throw new ArgumentNullException(nameof(str));
-            }
-
-            if (chars == null)
-            {
-                throw new ArgumentNullException(nameof(chars));
-            }
-
-            if (startIndex < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is less than zero");
-            }
-
-            if (endIndex < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "endIndex is less than zero");
-            }
-
-            if (startIndex > str.Length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is greater than str.Length");
-            }
-
-            if (startIndex > endIndex)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is greater than endIndex");
-            }
-
-            if (endIndex > str.Length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(endIndex), "endIndex > str.Length");
-            }
-
-            if (startIndex == endIndex)
-            {
-                return 0;
-            }
-
-            return GetCharsCount(str[startIndex.. (endIndex + 1)], chars);
+            // TODO #2. Implement the method using recursive algorithm.
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -104,48 +41,8 @@ namespace LookingForCharsRecursion
         /// <returns>The limited number of occurrences of characters to search for within the specified range of elements in the <see cref="string"/>.</returns>
         public static int GetCharsCount(string str, char[] chars, int startIndex, int endIndex, int limit)
         {
-            if (str == null)
-            {
-                throw new ArgumentNullException(nameof(str));
-            }
-
-            if (chars == null)
-            {
-                throw new ArgumentNullException(nameof(chars));
-            }
-
-            if (startIndex < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is less than zero");
-            }
-
-            if (endIndex < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "endIndex is less than zero");
-            }
-
-            if (limit < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(limit), "limit is less than zero");
-            }
-
-            if (startIndex > str.Length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is greater than str.Length");
-            }
-
-            if (startIndex > endIndex)
-            {
-                throw new ArgumentOutOfRangeException(nameof(startIndex), "startIndex is greater than endIndex");
-            }
-
-            if (endIndex > str.Length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(endIndex), "endIndex > str.Length");
-            }
-
-            int count = GetCharsCount(str[startIndex.. (endIndex + 1)], chars);
-            return count > limit ? limit : count;
+            // TODO #3. Implement the method using recursive algorithm.
+            throw new NotImplementedException();
         }
     }
 }
